@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable="no">
+    <title>Namaz Timings</title>
+    <link rel="stylesheet" href="./Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./Bootstrap/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="./style.css">
+
+    <script src="./Bootstrap/js/bootstrap.min.js"></script>
+    <script src="./Bootstrap/js/jquery.min.js"></script>
+    <script src="./Bootstrap/js/moment.js"></script>
+    <script src="./Bootstrap/js/bootstrap-hijri-datetimepicker.min.js"></script>
+
+</head>
+<body>
+    <div class="container-fluid">
+       <div class="row"> <u style="color:rgb(234, 26, 26)">
+            <p class="h6 d-flex justify-content-center" style="color:rgb(234, 26, 26)">
+                MASJID E MUBARAK <br> MUBARAK MOHALLA, KOLLEGAL
+            </p>  
+        </u> </div>
+
+        <div class="row">
+            <div class="col-5 ">
+                <p class="h6 d-flex justify-content-center">DD MM YYYY</p> 
+            </div>
+            <div class="col-2"></div>
+            <div class="col-5">
+                <p class="h6 d-flex justify-content-center">DD MM YYYY</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-5">
+                <input type="button" class="form-control trigger d-flex justify-content-center border-radius-skyblue" name="Date" id="date" />
+            </div>
+            <div class="col-2"></div>
+            <div class="col-5">
+                <input type="button" class="form-control trigger d-flex justify-content-center border-radius-skyblue" name="Hijri" id="hijri">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4">
+                <p class="h5 d-flex justify-content-center" style="color:rgb(7, 22, 136)">DATE</p>
+            </div>
+            <div class="col-4">
+                <p class="h5 d-flex justify-content-center" style="color:rgb(191, 33, 191)">TIME</p>
+            </div>
+            <div class="col-4">
+                <p class="h5 d-flex justify-content-center" style="color:rgb(7, 22, 136)">HIJRI</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4">
+                <p class="h6 d-flex justify-content-center border-radius" style="font-size: x-small; background-color:purple; color: white">&nbsp;TEMP.&nbsp; <input type="button" value="" class="form-control trigger" name="Temperature" id="temperature" style="height:80%" disabled/>&nbsp;°C&nbsp;</p>
+            </div>
+            <div class="col-4">
+                <input type="button" class="form-control trigger d-flex justify-content-center border-radius-black" name="Time" id="time" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-3">
+                <u style="color:rgb(207, 194, 14)">
+                <p class="h6 d-flex justify-content-center bg-blue border-radius" style="font-size:x-small" >
+                    AZAN
+                </p>
+                </u>
+            </div>
+            <div class="col-3">
+                <u style="color:rgb(207, 194, 14)">
+                <p class="h6 d-flex justify-content-center bg-blue border-radius" style="font-size:x-small">
+                    JAMA'AT
+                </p>
+                </u>
+            </div>
+        </div>
+
+        <div class="row bg-green">
+            <div class="col-3 padding-1">
+                <p class="h6 d-flex justify-content-start d-flex">
+                    FAJR
+                </p>
+            </div>
+            <div class="col-3 padding-1">
+                <input type="button" class="form-control trigger" name="Fajr Azan" id="fajr-azan" />
+            </div>
+            <div class="col-3 padding-1">
+                <input type="button" class="form-control trigger" name="Fajr Jamat" id="fajr-jamat" />
+            </div>
+            <div class="col-3 padding-1">
+                <p class="h6 d-flex justify-content-end d-flex justify-content-end arabic">
+                    الفجر
+                </p>
+            </div>
+        </div>
+
+        <div class="row bg-green">
+            <div class="col-3 padding-1">
+                <p class="h6 d-flex justify-content-start">
+                    ZUHAR
+                </p>
+            </div>
+            <div class="col-3 padding-1">
+                <input type="button" class="form-control trigger" name="Zuhar Azan" id="zuhar-azan" />
+            </div>
+            <div class="col-3 padding-1">
+                <input type="button" class="form-control trigger" name="Zuhar Jamat" id="zuhar-jamat" />
+            </div>
+            <div class="col-3 padding-1">
+                <p class="h6 d-flex justify-content-end arabic">
+                    الظهر
+                </p>
+            </div>
+        </div>
+
+        <div class="row bg-green">
+            <div class="col-3 padding-1">
+                <p class="h6 d-flex justify-content-start">
+                    ASR
+                </p>
+            </div>
+            <div class="col-3 padding-1">
+                <input type="button" class="form-control trigger" name="Asr Azan" id="asr-azan" />
+            </div>
+            <div class="col-3 padding-1">
+                <input type="button" class="form-control trigger" name="Asr Jamat" id="asr-jamat" />
+            </div>
+            <div class="col-3 padding-1">
+                <p class="h6 d-flex justify-content-end arabic">
+                    العصر
+                </p>
+            </div>
+        </div>
+
+        <div class="row bg-green">
+            <div class="col-3 padding-1">
+                <p class="h6 d-flex justify-content-start">
+                    MAGHRIB
+                </p>
+            </div>
+            <div class="col-3 padding-1">
+                <input type="button" class="form-control trigger" name="Maghrib Azan" id="maghrib-azan" />
+            </div>
+            <div class="col-3 padding-1">
+                <input type="button" class="form-control trigger" name="Maghrib Jamat" id="maghrib-jamat" />
+            </div>
+            <div class="col-3 padding-1">
+                <p class="h6 d-flex justify-content-end arabic">
+                    المغرب
+                </p>
+            </div>
+        </div>
+
+        <div class="row bg-green">
+            <div class="col-3 padding-1">
+                <p class="h6 d-flex justify-content-start">
+                    ISHA
+                </p>
+            </div>
+            <div class="col-3 padding-1">
+                <input type="button" class="form-control trigger" name="Isha Azan" id="isha-azan" />
+            </div>
+            <div class="col-3 padding-1">
+                <input type="button" class="form-control trigger" name="Isha Jamat" id="isha-jamat" />
+            </div>
+            <div class="col-3 padding-1">
+                <p class="h6 d-flex justify-content-end arabic">
+                    العشاء
+                </p>
+            </div>
+        </div>
+
+        <div class="row bg-green">
+            <div class="col-3 padding-1">
+                <p class="h6 d-flex justify-content-start">
+                    JUM'AH
+                </p>
+            </div>
+            <div class="col-3 padding-1">
+                <input type="button" class="form-control trigger" name="Jumah Azan" id="jumah-azan" />
+            </div>
+            <div class="col-3 padding-1">
+                <input type="button" class="form-control trigger" name="Jumah Jamat" id="jumah-jamat" />
+            </div>
+            <div class="col-3 padding-1">
+                <p class="h6 d-flex justify-content-end arabic">
+                    جمعة
+                </p>
+            </div>
+        </div>
+
+        <div class="row bg-yellow">
+            <div class="col-3 padding-1">
+                <p class="h6 d-flex justify-content-start">
+                    SAHR
+                </p>
+            </div>
+            <div class="col-3 padding-1">
+                <input type="button" class="form-control trigger" name="Sahr" id="sahr" />
+            </div>
+            <div class="col-3 padding-1">
+                <input type="button" class="form-control trigger" name="Iftar" id="iftar" />
+            </div>
+            <div class="col-3 padding-1">
+                <p class="h6 d-flex justify-content-end">
+                    IFTAR      
+                </p>
+            </div>
+        </div>
+
+        <div class="row bg-blue">
+            <div class="col-3 col-offset padding-1">
+                <p class="h6 d-flex justify-content-start cus" >
+                    SUBAH SADIQ
+                </p>
+            </div>
+            <div class="col-3 padding-1">
+                <input type="button" class="form-control trigger" name="Subah Sadiq" id="subah-sadiq" />
+            </div>
+            <div class="col-3 padding-1">
+                <input type="button" class="form-control trigger" name="Ishraq" id="ishraq" />
+            </div>
+            <div class="col-3 padding-1">
+                <p class="h6 d-flex justify-content-end">
+                    ISHRAQ
+                </p>
+            </div>
+        </div>
+
+        <div class="row bg-skyblue">
+            <div class="col-3 padding-1">
+                <p class="h6 d-flex justify-content-start cus" >
+                    FAJR KA AAQRI WAQT
+                </p>
+            </div>
+            <div class="col-3 padding-1">
+                <input type="button" class="form-control trigger" name="Fajr AAqri Waqt" id="fajr-aaqri-waqt" />
+            </div>
+            <div class="col-3 padding-1">
+                <input type="button" class="form-control trigger" name="Chasth" id="chasth" />
+            </div>
+            <div class="col-3 padding-1">
+                <p class="h6 d-flex justify-content-end">
+                    CHASTH
+                </p>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="modal" role="dialog">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h4 class="modal-title">Date</h4>
+                    <button type="button" id="close" class="btn-close" data-bs-dismiss="modal">    
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" name="ModalDisplay" class="form-control" id="modalDisplay" autocomplete="off">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" id="okay"class="btn btn-primary" >
+                            Okay
+                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="25" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+                                <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                              </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="toast text-white" id="toast">
+                <div class="toast-header text-white">
+                    <strong class="" name="InfoTitle" id="infoTitle"></strong>
+                </div>
+                <div class="toast-body" name="InfoBody" id="infoBody">
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+<script src="./script.js"></script>
+<script src="./wifi.js"></script>
+</html>
